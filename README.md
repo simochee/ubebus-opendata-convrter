@@ -14,3 +14,9 @@
 ## Note
 
 * 時刻データは2017年5月時点のデータ形式にのみ対応しています
+
+## Links
+
+* [宇部市営バス](http://www.ubebus.jp/)
+
+* [async](https://www.npmjs.com/package/async)
