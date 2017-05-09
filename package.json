@@ -1,0 +1,19 @@
+{
+  "name": "node-xlsx-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.0",
+    "fs": "0.0.1-security",
+    "moment": "^2.18.1",
+    "mongoose": "^4.9.8",
+    "xlsx": "^0.9.13"
+  }
+}
