@@ -84,7 +84,10 @@ module.exports = (workbooks, stops, routes, callback) => {
 
                         if(cell && /^\d+:\d+$/.test(cell.w)) {
                             _cars[route][_cars[route].length - 1].stops.push(header[c - 1]);
-                            _cars[route][_cars[route].length - 1].times.push(moment(cell.v).format('HH:mm'));
+                            _cars[route][_cars[route].length - 1].times.push(moment.parseZone(cell.v).add(-9, 'h').format('HH:mm'));
+                            // const d = new Date(cell.v);
+                            // _cars[route][_cars[route].length - 1].times.push(`${u.zero(d.getHours())}:${u.zero(d.getMinutes())}`);
+                            // console.log(cell.v, `${u.zero(d.getHours())}:${u.zero(d.getMinutes())}`)
                         }
                     }
                 }

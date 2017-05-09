@@ -4,10 +4,10 @@ const Schema = mongoose.Schema;
 const TimeSchema = new Schema({
     id: Number,
     car_id: Number,
-    stop: Number,
+    stop_id: Number,
     time: String,
-    next: {
-        stop: Number,
+    prev: {
+        stop_id: Number,
         time: String
     }
 });

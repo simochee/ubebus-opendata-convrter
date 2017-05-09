@@ -42,3 +42,10 @@ exports.genUniqueId = (name, min = 10001, max = 99999) => {
     ids[name].push(id);
     return id;
 }
+
+/**
+ * 数値をゼロ埋めの文字列に変換
+ */
+exports.zero = (num, lv = 2) => {
+    return `0000000000${num}`.slice(-lv);
+}

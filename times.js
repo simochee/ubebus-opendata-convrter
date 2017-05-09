@@ -14,19 +14,19 @@ module.exports = (workbooks, stops, routes, cars, callback) => {
         route_id = car.route_id;
         car.times.forEach((time, i) => {
             const id = u.genUniqueId('time_id');
-            const stop = car.stops[i];
+            const stop_id = car.stops[i];
             const item = {
                 id,
                 car_id: car.id,
                 time,
-                stop
+                stop_id
             }
-            const next_time = car.times[i + 1];
-            const next_stop = car.stops[i + 1];
-            if(next_time) {
-                item.next = {
-                    time: next_time,
-                    stop: next_stop
+            const prev_time = car.times[i - 1];
+            const prev_stop = car.stops[i - 1];
+            if(prev_time) {
+                item.prev = {
+                    stop_id: prev_stop,
+                    time: prev_time,
                 }
             }
             times.push(item);

@@ -97,7 +97,7 @@ module.exports = (workbooks, stops, callback) => {
                         if(_routes[route.id].stops.length < route.stops.length) {
                             _routes[route.id] = {
                                 // のぼり・くだりによって順序を変える
-                                stops: sheet_idx % 2 ? route.stops : route.stops.reverse()
+                                stops: sheet_idx % 2 ? route.stops.reverse() : route.stops
                             }
                         }
                     } else {
@@ -117,7 +117,7 @@ module.exports = (workbooks, stops, callback) => {
                         })();
                         _routes[route.id] = {
                             // のぼり・くだりによって順序を変える
-                            stops: sheet_idx % 2 ? route.stops : route.stops.reverse(),
+                            stops: sheet_idx % 2 ? route.stops.reverse() : route.stops,
                             via
                         }
                     }
